@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.chess {
+    position: relative;
+    width: 762px;
+    height: 762px;
+    margin: 50px auto 0px auto;
+    background-image: url(./img/timg.jpg);
+    background-size: 100% 100%;
+}
+.grid {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.start, 
+.game,
+.over {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.start {
+    /* display: none; */
+}
+
+.game {
+    display: none;
+}
+
+.over {
+    display: none;
+}
+
+.start > div:nth-child(1),
+.over > div:nth-child(1) {
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 20%;
+}
+
+.start .play,
+.over .again {
+    font-size: 40px;
+    padding-top: 12%;
+    color: #aaa;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.level {
+    font-size: 30px;
+    margin-top: 10%;
+    color: #aaa;
+}
+
+.level ul {
+    display: flex;
+    justify-content: center;
+}
+
+.level ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.level ul li a {
+    cursor: pointer;
+}
+
+.start .play:hover,
+.over .again:hover,
+.level ul li:hover a, 
+.level ul li a.active {
+    color: #fff;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.game > div:nth-child(1) {
+    font-size: 24px;
+    padding: 6% 0 12% 0;
+}
+
+.game > div:nth-child(1) > div {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 49%;
+    text-align: left;
+    padding-left: 16%;
+}
+
+.game > div:nth-child(1) .title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.game .content {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 5px solid #fff;
+    margin: 0 auto;
+}
+
+.game .content .snake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+
+.game .content .food {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+
+.over > div:nth-child(2) {
+    font-size: 40px;
+    color: #ddd;
+    margin: 5% 0 -5% 0;
+}
+
+.tips {
+    position: relative;
+    top: 1%;
+    left: 0;
+    right: 0;
+    color: #888;
+    text-align: center;
+    margin: 0 auto;
+}

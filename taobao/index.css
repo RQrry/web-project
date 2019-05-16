@@ -1,0 +1,734 @@
+/* common css */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background: #f4f4f4;
+}
+
+.wrap {
+    width: 1190px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+a {
+    color: #3c3c3c;
+}
+
+
+/* 导航头 */
+.cover {
+    height: 35px;
+    line-height: 35px;
+}
+
+.cover .nav-left {
+    float: left;
+}
+
+.cover .nav-right {
+    float: right;
+}
+
+.cover .nav-right .line {
+    color: #ddd;
+}
+
+.cover ul li {
+    float: left;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+.cover ul li a {
+    display: inline-block;
+}
+
+.cover .nav-left li .login,
+.cover ul li strong,
+.cover ul li a:hover {
+    color: #f40;
+}
+
+.cover ul li .icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+
+.cover ul li .icon-xsj {
+    height: 6px;
+    line-height: 6px;
+    background: url(img/xsj.png) no-repeat;
+    margin-left: 7px;
+}
+
+.cover ul li .icon-gwc {
+    background: url(img/gwc.png) no-repeat;
+}
+
+.cover ul li .icon-star {
+    background: url(img/star.png) no-repeat;
+}
+
+.cover ul li .icon-dh {
+    background: url(img/dh.png) no-repeat;
+    background-position: 4px 3px;
+}
+
+
+/* 搜索栏 */
+.cup {
+    height: 97px;
+    padding-top: 24px;
+    background: #fff;
+}
+
+.cup .tbh-logo {
+    float: left;
+    width: 190px;
+    height: 80px;
+}
+
+.cup .tbh-logo a {
+    display: inline-block;
+}
+
+.cup .tbh-search {
+    float: left;
+    width: 630px;
+    margin: 0 100px;
+    font-size: 12px;
+}
+
+.cup .tbh-search .search-bd .search-tab {
+    height: 22px;
+    margin-left: 17px;
+}
+
+.cup .tbh-search .search-bd .search-tab ul {
+    overflow: hidden;
+}
+
+.cup .tbh-search .search-bd .search-tab ul li {
+    float: left;
+    width: 36px;
+    line-height: 22px;
+    margin-right: 4px;
+    color: #f40;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cup .tbh-search .search-bd .search-tab ul li:hover {
+    background: #ffeee5;
+}
+
+.cup .tbh-search .search-bd .search-tab ul li.active {
+    color: #fff;
+    background: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    border-radius: 6px 6px 0 0;
+}
+
+.cup .tbh-search .search-bd .search-panel {
+    position: relative;
+}
+
+.cup .tbh-search .search-bd .search-panel .search-box {
+    position: relative;
+    height: 36px;
+    border: 2px solid #ff5000;
+    border-radius: 20px;
+}
+
+.cup .tbh-search .search-bd .search-panel .search-box input {
+    width: 472px;
+    height: 24px;
+    line-height: 24px;
+    padding: 6px 0;
+    margin-left: 24px;
+    text-indent: 10px;
+    border: none;
+    outline: none;
+}
+
+.cup .tbh-search .search-bd .search-panel .search-box .icon {
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+}
+
+.cup .tbh-search .search-bd .search-panel .search-box .icon-fdj {
+    background: url(img/fdj.png) no-repeat;
+    top: 10px;
+    left: 12px;
+}
+
+.cup .tbh-search .search-bd .search-panel .search-box .icon-camera {
+    background: url(img/camera.png) no-repeat;
+    top: 7px;
+    right: 86px;
+    cursor: pointer;
+}
+
+.cup .tbh-search .search-bd .search-panel button {
+    position: absolute;
+    width: 74px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    border: none;
+    border-radius: 0 20px 20px 0;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.cup .tbh-search .search-ft {
+    height: 18px;
+    line-height: 18px;
+    padding-top: 5px;
+}
+
+.cup .tbh-search .search-ft a.active,
+.cup .tbh-search .search-ft a:hover {
+    color: #f40;
+}
+
+.cup .tbh-qr {
+    float: left;
+    position: relative;
+}
+
+.cup .tbh-qr .qr-bd {
+    display: inline-block;
+    width: 74px;
+    height: 88px;
+    color: #666;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.cup .tbh-qr .qr-bd span {
+    font-size: 12px;
+    color: #f40;
+}
+
+.cup .tbh-qr .qr-bd img {
+    width: 62px;
+    height: 62px;
+}
+
+.cup .tbh-qr .close {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 10px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #eee;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    left: -16px;
+}
+
+
+/* 淘宝主题header */
+.tbh-nav .wrap {
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+}
+
+.tbh-nav h2 {
+    float: left;
+    width: 190px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: #ff5000
+}
+
+.tbh-nav ul {
+    float: left;
+}
+
+.tbh-nav ul li {
+    float: left;
+    margin: 0 3px;
+    padding: 0 4px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.tbh-nav ul li a {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 5px;
+}
+
+
+.tbh-nav ul li a:hover::before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 11px;
+    background: url(img/up.png) no-repeat;
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+
+/* 内容栏 */
+.screen,
+.screen .wrap {
+    height: 632px;
+}
+
+.screen .main {
+    float: left;
+    width: 900px;
+    height: 100%;
+}
+
+.screen .main .main-inner {
+    overflow: hidden;
+}
+
+.screen .main .main-inner .service {
+    float: left;
+    width: 190px;
+    height: 522px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.screen .main .main-inner .service ul {
+    height: 100%;
+    border: 1px solid #ff5000;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.screen .main .main-inner .service ul li {
+    display: inline-block;
+    width: 145px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px 0 25px;
+    position: relative;
+}
+
+.screen .main .main-inner .service ul li:hover {
+    background: #ffe4dc;
+    color: #ff5000;
+}
+
+.screen .main .main-inner .service ul li:hover a {
+    color: #ff5000;
+}
+
+.screen .main .main-inner .service ul li:hover a:hover {
+    text-decoration: underline #ff5000;
+}
+
+.screen .main .main-inner .service ul li .icon.icon-yjt {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(img/yjt.png) no-repeat;
+    position: absolute;
+    top: 12px;
+    right: 4px;
+}
+
+.screen .main .main-inner .screen-box {
+    float: left;
+    width: 520px;
+    height: 512px;
+    margin: 10px 0 0 10px;
+}
+
+.screen .main .main-inner .screen-box .tmall .mall {
+    height: 30px;
+    font-size: 12px;
+    padding-top: 11px;
+    background: #f1f1f1;
+}
+
+.screen .main .main-inner .screen-box .tmall .mall .icon.icon-tm {
+    display: inline-block;
+    width: 140px;
+    height: 24px;
+    background: url(img/tm.png) no-repeat;
+}
+
+.screen .main .main-inner .screen-col {
+    float: right;
+    width: 160px;
+    height: 512px;
+    margin: 10px 10px 0 0;
+}
+
+.screen .main .main-inner .screen-col .hot h5 {
+    font-size: 12px;
+    line-height: 24px;
+    padding-top: 6px;
+    background: #f1f1f1;
+    color: #a1a1a1;
+}
+
+.screen .main .tb-headline {
+    float: left;
+    width: 890px;
+    height: 100px;
+}
+
+.screen .main .tb-headline .headline {
+    position: relative;
+    background: #fff;
+    padding: 14px 14px 12px 20px;
+    margin-top: 10px;
+}
+
+.screen .main .tb-headline .headline .headline-con {
+    position: absolute;
+    width: 676px;
+    height: 73px;
+    left: 190px;
+    top: 14px;
+}
+
+.screen .main .tb-headline .headline .headline-con a {
+    display: block;
+}
+
+.screen .main .tb-headline .headline .headline-con a:hover h4 {
+    color: #f40;
+}
+
+.screen .main .tb-headline .headline .headline-con a img {
+    float: left;
+    height: 73px;
+    margin-right: 16px;
+}
+
+.screen .main .tb-headline .headline .headline-con a h4 {
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.screen .main .tb-headline .headline .headline-con a p {
+    line-height: 18px;
+    font-size: 14px;
+    color: #999;
+}
+
+.screen .main .tb-headline .headline .more {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+.screen .main .tb-headline .headline .more:hover {
+    color: #f40;
+}
+
+.screen .main .tb-headline .headline .more .icon.icon-yjt {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-left: 3px;
+    background: url(img/yjt.png) no-repeat;
+}
+
+.screen .col-right {
+    float: right;
+    width: 290px;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.screen .col-right .tbh-member {
+    height: 132px;
+    padding: 3px 0 10px 0;
+    font-size: 12px;
+    text-align: center;
+    background: url(img/bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.screen .col-right .tbh-member .member-bd .avatar a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.screen .col-right .tbh-member .member-bd p a {
+    display: inline-block;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 10px 0 0;
+    color: #ff5000;
+    background: #ffe4db;
+    border-radius: 9px;
+}
+
+.screen .col-right .tbh-member .member-bd p a .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(img/pics.png) no-repeat;
+}
+
+.screen .col-right .tbh-member .member-bd p a .icon.icon-jin {
+    background-position: 0 -572px;
+}
+
+.screen .col-right .tbh-member .member-bd p a .icon.icon-hy {
+    background-position: 0 -527px;
+}
+
+.screen .col-right .tbh-member .member-ft {
+    height: 40px;
+    font-size: 14px;
+    padding: 8px 0 0 4px;
+}
+
+.screen .col-right .tbh-member .member-ft a {
+    display: inline-block;
+    width: 75px;
+    line-height: 25px;
+    margin-right: 2px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right,#ff5000 0,#ff6f06 100%);
+    border-radius: 4px;
+}
+
+.screen .col-right .tbh-member .member-ft a.login {
+    width: 92px;
+}
+
+.screen .col-right .tbh-tip a {
+    position: relative;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    color: #f40;
+    background: #ffe4db;
+}
+
+.screen .col-right .tbh-tip a .icon.icon-ysj {
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    background: url(img/ysj.png) no-repeat;
+    top: 8px;
+    right: 50px;
+}
+
+.screen .col-right .tbh-notice {
+    height: 98px;
+    padding-top: 10px;
+    font-size: 12px;
+    background: #fff;
+}
+
+.screen .col-right .tbh-notice ul li {
+    float: left;
+}
+
+.screen .col-right .tbh-notice .notice-hd {
+    position: relative;
+    height: 24px;
+    margin-top: 4px;
+    padding: 0 8px;
+}
+
+.screen .col-right .tbh-notice .notice-hd li {
+    width: 32px;
+    line-height: 20px;
+    margin: 0 11px;
+    text-align: center;
+}
+
+.screen .col-right .tbh-notice .notice-hd li.active {
+    font-weight: 700;
+    border-bottom: 2px solid #f40;
+}
+
+.screen .col-right .tbh-notice ul li:hover a,
+.screen .col-right .tbh-notice .notice-bd li.active a {
+    color: #f40;
+}
+.screen .col-right .tbh-notice .notice-bd {
+    height: 50px;
+    margin: 0 12px;
+    padding: 9px 0 6px;
+}
+
+.screen .col-right .tbh-notice .notice-bd li {
+    width: 130px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.screen .col-right .tbh-conve {
+    height: 232px;
+    font-size: 12px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.screen .col-right .tbh-conve ul li {
+    float: left;
+    width: 70.5px;
+    height: 75px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.screen .col-right .tbh-conve ul li.b-r {
+    border-right-color: transparent;
+}
+
+.screen .col-right .tbh-conve ul li a {
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(img/pics.png) no-repeat;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon2 {
+    background-position: 0 -87px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon3 {
+    background-position: 0 -44px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon4 {
+    background-position: 0 -132px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon5 {
+    background-position: 0 -175px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon6 {
+    background-position: 0 -220px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon7 {
+    background-position: 0 -264px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon8 {
+    background-position: 0 -310px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon9 {
+    background-position: 0 -352px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon10 {
+    background-position: 0 -396px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon11 {
+    background-position: 0 -440px;
+}
+
+.screen .col-right .tbh-conve ul li a .icon.icon12 {
+    background-position: 0 -484px;
+}
+
+.screen .col-right .tbh-conve ul li:hover a {
+    color: #f40;
+}
+
+.screen .col-right .tbh-app {
+    height: 110px;
+    background: #fff;
+}
+
+.screen .col-right .tbh-app h3 {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 14px;
+}
+
+.screen .col-right .tbh-app h3 a.more {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 400;
+    right: 10px;
+}
+
+.screen .col-right .tbh-app h3 a.more:hover {
+    color: #f40;
+}
+
+.screen .col-right .tbh-app h3 a.more .icon.icon-yjt {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background: url(img/yjt.png) no-repeat;
+    margin-left: 4px;
+}
+
+.screen .col-right .tbh-app ul {
+    height: 84px;
+    padding-left: 23px;
+}
+
+.screen .col-right .tbh-app ul li {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin: 0 21px 8px 0;
+}
+
+.screen .col-right .tbh-app ul li a img {
+    width: 32px;
+    height: 32px;
+}
