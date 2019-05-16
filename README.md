@@ -6,6 +6,5 @@
 
 ## Game
 原生js
-* [RGP人物移动](https://rqrry.github.io/web-project//Game/RGP_Runing/index.html)
 * [五子棋游戏](https://rqrry.github.io/web-project//Game/Gobang/index.html)
 * [贪吃蛇游戏](https://rqrry.github.io/web-project//Game/Snake/index.html)
