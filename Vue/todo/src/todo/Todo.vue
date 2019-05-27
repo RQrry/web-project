@@ -5,6 +5,7 @@
       class="add-input"
       placeholder="接下去要做什么"
       autofocus
+      v-focus
       @keyup.enter="addTodo"
     >
     <Item
@@ -64,6 +65,13 @@ export default {
     },
     clearAllCompleted () {
       this.todos = this.todos.filter(todo => !todo.completed)
+    }
+  },
+  directives: {
+    focus: {
+      inserted: function (el) {
+        el.focus()
+      }
     }
   }
 }
