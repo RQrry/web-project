@@ -6,7 +6,7 @@
 
 ## Vue
 * [todo](https://rqrry.github.io/web-project/Vue/todo/dist/index.html) 组件拆分
-* [todolist](https://rqrry.github.io/web-project/Vue/todolist/dist/index.html) vue-router+vuex
+* [todolist](https://rqrry.github.io/web-project/Vue/todolist/dist/index.html) vue-router+vuex 浏览器调整为手机端预览
 
 ## Game
 原生js
