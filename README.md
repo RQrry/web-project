@@ -5,7 +5,8 @@
 * [淘宝首页](https://rqrry.github.io/web-project/taobao/index.html) 静态页面
 
 ## Vue
-* [todo](https://rqrry.github.io/web-project/Vue/todo/dist/index.html)
+* [todo](https://rqrry.github.io/web-project/Vue/todo/dist/index.html) 组件拆分
+* [todolist](https://rqrry.github.io/web-project/Vue/todolist/dist/index.html) vue-router+vuex
 
 ## Game
 原生js
