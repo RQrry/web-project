@@ -23,9 +23,9 @@
     title: 'title4'
   }];
 
-  var angle0 = -90;
-  var x0 = 300, y0 = 300;
-  var radius = 100;
+  var angle0 = -90; // -90度为起始点
+  var x0 = 300, y0 = 300; // 圆心
+  var radius = 100; // 半径
   for(var i=0; i<data.length; i++) {
     ctx.beginPath();
     ctx.moveTo(x0, y0);
@@ -35,10 +35,11 @@
     ctx.fillStyle = data[i].color;
     ctx.arc(x0, y0, radius, startAngle, endAngle);
     ctx.fill();
+    // 文字
     var textAngle = angle0 + angle / 2;
     var x1 = x0 + Math.cos(textAngle * Math.PI / 180) * (radius + 20);
     var y1 = y0 + Math.sin(textAngle * Math.PI / 180) * (radius + 20);
-    if(textAngle > 90 && textAngle < 270) {
+    if(textAngle > 90 && textAngle < 270) { // 左侧文字尾对齐
       ctx.textAlign = 'end';
     }
     ctx.fillText(data[i].value * 100 + '%', x1, y1);

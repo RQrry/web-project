@@ -23,23 +23,25 @@
       ctx.drawImage(img, i % 4 * rpgWidth, j * rpgHeight, rpgWidth, rpgHeight, x0, y0, rpgWidth, rpgHeight);
       keyEvent();
     }, 100);
+
+    // 键盘事件 判断方向和画布边界
     function keyEvent() {
       document.onkeydown = function (e) {
         e = e || window.event;
         switch (e.keyCode) {
-          case 37:
+          case 37: // left
             j = 1;
             (x0 > 0) && (x0 -= speed);
             break;
-          case 38:
+          case 38: // top
             j = 3;
             (y0 > -8) && (y0 -= speed);
             break;
-          case 39:
+          case 39: // right
             j = 2;
             (x0 < WIDTH - rpgWidth) && (x0 += speed);
             break;
-          case 40:
+          case 40: // bottom
             j = 0;
             (y0 < HEIGHT - rpgHeight) && (y0 += speed);
             break;
