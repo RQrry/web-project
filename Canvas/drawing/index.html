@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>drawing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      height:100%;
+    }
+    body {
+      padding: 10px;
+    }
+    .control {
+      width: 250px;
+      float: left;
+      margin-top: 20px;
+    }
+    .control ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .control ul li {
+      width: 50%;
+      height: 50px;
+      list-style: none;
+      text-align: center;
+    }
+    .control ul li button {
+      width: 80%;
+      height: 34px;
+      line-height: 34px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: LightSeaGreen;
+      outline: none;
+    }
+    .control ul li button.active {
+      background-color: aquamarine;
+    }
+    .control ul li button input {
+      width: 40px;
+      height: 100%;
+      box-sizing: border-box;
+      margin-left: 5px;
+      padding: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="control">
+      <ul class="type">
+        <li><button class="line active" data-type="line">直线</button></li>
+        <li><button class="rectangle" data-type="rectangle">矩形</button></li>
+        <li><button class="circle" data-type="circle">圆</button></li>
+        <li><button class="pencil" data-type="pencil">铅笔</button></li>
+        <li><button class="polygon" data-type="polygon">多边形<input type="number" value="3" min="3"></button></li>
+        <li><button class="eraser" data-type="eraser">橡皮</button></li>
+      </ul>
+      <ul class="mode">
+        <li><button class="stroke active" data-mode="stroke">描边</button></li>
+        <li><button class="fill" data-mode="fill">填充</button></li>
+      </ul>
+      <ul>
+        <li><button class="color">颜色<input type="color" value="#000000"></button></li>
+        <li><button class="lineWidth">线宽<input type="number" min="1" value="1"></button></li>
+      </ul>
+      <ul>
+        <li><button class="cancel">撤销</button></li>
+        <li><button class="clear">清空</button></li>
+        <li><button class="save">保存</button></li>
+      </ul>
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="jquery.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
