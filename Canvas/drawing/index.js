@@ -103,12 +103,18 @@ Draw.prototype = {
   }
 }
 
+// 去掉浏览器右击默认事件
+document.oncontextmenu = function () {
+  return false;
+}
+
 // 选择画图类型
 typeBtn.each(function (index, ele) {
   $(ele).click(function () {
     typeBtn.removeClass('active');
     $(this).addClass('active');
     type = $(this).attr('data-type');
+  console.log(type)
   });
 });
 
@@ -164,25 +170,27 @@ polygonBtn.change(function () {
 // x1 y1 鼠标抬起坐标
 var x0,y0,x1,y1;
 canvas.onmousedown = function (e) {
-  x0 = e.offsetX;
-  y0 = e.offsetY;
-  if (type === 'pencil' || type === 'eraser') {
-    ctx.beginPath();
-    ctx.moveTo(x0, y0);
-  }
-  var draw = new Draw(ctx, {mode: mode, color: color, lineWidth: lineWidth});
-
-  canvas.onmousemove = function (e) {
-    x1 = e.offsetX;
-    y1 = e.offsetY;
-    ctx.clearRect(0, 0, WIDTH, HEIGHT);
-    if (arr.length > 0) {
-      ctx.putImageData(arr[arr.length - 1], 0, 0, 0, 0, WIDTH, HEIGHT);
+  if (e.button === 0) {   
+    x0 = e.offsetX;
+    y0 = e.offsetY;
+    if (type === 'pencil' || type === 'eraser') {
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
     }
-    if (type === 'polygon') {
-      draw[type](x0, y0, x1, y1, n);
-    } else {
-      draw[type](x0, y0, x1, y1);
+    var draw = new Draw(ctx, {mode: mode, color: color, lineWidth: lineWidth});
+    
+    canvas.onmousemove = function (e) {
+      x1 = e.offsetX;
+      y1 = e.offsetY;
+      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+      if (arr.length > 0) { // 保存鼠标抬起时的画布像素点数据
+        ctx.putImageData(arr[arr.length - 1], 0, 0, 0, 0, WIDTH, HEIGHT);
+      }
+      if (type === 'polygon') {
+        draw[type](x0, y0, x1, y1, n);
+      } else {
+        draw[type](x0, y0, x1, y1);
+      }
     }
   }
 
