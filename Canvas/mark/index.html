@@ -21,6 +21,10 @@
         line-height: 50px;
         text-align: center;
       }
+      .control li {
+        line-height: 50px;
+        height: 50px;
+      }
       .control button {
         width: 80px;
         height: 30px;
@@ -42,7 +46,7 @@
       .tips {
         display: none;
         position: relative;
-        width: 210px;
+        min-width: 210px;
         height: 30px;
         line-height: 30px;
         font-size: 12px;
@@ -51,6 +55,7 @@
         border-radius: 5px;
         left: 115px;
         top: -39px;
+        padding: 0 5px;
         z-index: 2;
       }
       #canvas {
@@ -73,6 +78,14 @@
         <li>
           <button data-type="polygon">多边形</button>
           <div class="tips">鼠标左击打点，鼠标右击闭合多边形</div>
+        </li>
+        <li>
+          <button class="save">保存</button>
+          <div class="tips">保存标注数据，可刷新浏览器查看效果</div>
+        </li>
+        <li>
+          <button class="clear">重置</button>
+          <div class="tips">清空标注数据，可刷新浏览器查看效果</div>
         </li>
       </ul>
       <canvas id="canvas"></canvas>

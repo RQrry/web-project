@@ -7,8 +7,8 @@ canvas.height = HEIGHT; // 画布高
 canvas.style.border = '1px solid #ddd';
 let type = 'rectangle';
 let points = []; // 点
-const rects = []; // 矩形
-const polygons = []; // 多边形
+const rects = JSON.parse(localStorage.getItem('rects')) || []; // 矩形
+const polygons = JSON.parse(localStorage.getItem('polygons')) || []; // 多边形
 let x0, y0, x1, y1; // 鼠标点击、抬起坐标
 let x, y;
 
@@ -69,7 +69,7 @@ Draw.prototype = {
         let y1 = rects[i].points[3];
         this.rectangle(x0, y0, x1, y1);
         this.ctx.fill();
-        this.text(x0, y0, rects[0].text+i);
+        this.text(x0, y0, rects[0].text+(i+1));
       }
     }
     if (polygons) {
@@ -87,11 +87,18 @@ Draw.prototype = {
         this.ctx.closePath();
         this.ctx.stroke();
         this.ctx.fill();
-        this.text(x0, y0, polygons[0].text+i);
+        this.text(x0, y0, polygons[0].text+(i+1));
       }
     }
+  },
+  // 重置
+  clear: function () {
+    this.ctx.clearRect(0, 0, WIDTH, HEIGHT);
   }
 }
+
+let draw = new Draw(ctx);
+draw['redraw'](rects, polygons);
 
 // 去掉浏览器右击默认事件
 document.oncontextmenu = function () {
@@ -108,11 +115,22 @@ $('.control button').each(function (index, ele) {
   });
 });
 
+// 保存
+$('.save').click(function () {
+  localStorage.setItem("rects", JSON.stringify(rects));
+  localStorage.setItem('polygons', JSON.stringify(polygons));
+});
+
+// 重置
+$('.clear').click(function () {
+  draw['clear']();
+  localStorage.clear();
+});
+
 canvas.onmousedown = function (e) {
   if (e.button === 0) {
     x0 = e.offsetX;
     y0 = e.offsetY;
-    let draw = new Draw(ctx);
     if (type === 'polygon') {
       points.push([x0, y0]);
       draw[type](points);
@@ -122,7 +140,7 @@ canvas.onmousedown = function (e) {
       x1 = e.offsetX;
       y1 = e.offsetY;
       if (type === 'rectangle') {
-        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        draw['clear']();
         draw[type](x0, y0, x1, y1);
         draw['redraw'](rects, polygons);
       }
@@ -137,8 +155,6 @@ canvas.onmousedown = function (e) {
         points = [];
         x0 = undefined; y0 = undefined;
       }
-      let draw = new Draw(ctx);
-      ctx.clearRect(0, 0, WIDTH, HEIGHT);
       draw['redraw'](rects, polygons);
     }
   }
@@ -148,8 +164,7 @@ document.onmousemove = function (e) {
   if (type === 'polygon') {
     x1 = e.offsetX;
     y1 = e.offsetY;
-    let draw = new Draw(ctx);
-    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    draw['clear']();
     draw['line'](x0, y0, x1, y1);
     draw[type](points);
     draw['redraw'](rects, polygons);
@@ -157,7 +172,6 @@ document.onmousemove = function (e) {
 }
 
 canvas.onmouseup = function (e) {
-  let draw = new Draw(ctx);
   if (e.button === 0) {
     if (type === 'rectangle') {
       if (x0 && y0 && x1 && y1) {
@@ -167,7 +181,7 @@ canvas.onmouseup = function (e) {
           points: rectPoints
         })
       }
-      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+      draw['clear']();
       draw['redraw'](rects, polygons);
       canvas.onmousemove = null;
     }
