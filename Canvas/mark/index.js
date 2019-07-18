@@ -7,8 +7,8 @@ canvas.height = HEIGHT; // 画布高
 canvas.style.border = '1px solid #ddd';
 let type = 'rectangle';
 let points = []; // 点
-const rects = JSON.parse(localStorage.getItem('rects')) || []; // 矩形
-const polygons = JSON.parse(localStorage.getItem('polygons')) || []; // 多边形
+let rects = JSON.parse(localStorage.getItem('rects')) || []; // 矩形
+let polygons = JSON.parse(localStorage.getItem('polygons')) || []; // 多边形
 let x0, y0, x1, y1; // 鼠标点击、抬起坐标
 let x, y;
 
@@ -125,6 +125,9 @@ $('.save').click(function () {
 $('.clear').click(function () {
   draw['clear']();
   localStorage.clear();
+  points = [];
+  rects = [];
+  polygons = [];
 });
 
 canvas.onmousedown = function (e) {
