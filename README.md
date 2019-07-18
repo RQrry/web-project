@@ -4,6 +4,9 @@
 ## HTML
 * [淘宝首页](https://rqrry.github.io/web-project/taobao/index.html) 静态页面
 
+## CSS3
+* [loading](https://rqrry.github.io/web-project/CSS3/loading/index.html) 加载动画
+
 ## jquery
 * [todo](https://rqrry.github.io/web-project/jquery/todo/index.html) jq版本的todo
 
