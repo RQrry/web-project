@@ -19,6 +19,9 @@
 * [todo](https://rqrry.github.io/web-project/Vue/todo/dist/index.html) 组件拆分
 * [todolist](https://rqrry.github.io/web-project/Vue/todolist/dist/index.html) vue-router+vuex 手机端预览
 
+## React
+* [thinking-in-react](https://codepen.io/RQrry/pen/zgKWea?editors=0110) React 哲学 组件demo
+
 ## Game
 原生js
 * [五子棋游戏](https://rqrry.github.io/web-project//Game/Gobang/index.html) 判断获胜方
