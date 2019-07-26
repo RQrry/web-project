@@ -1,0 +1,27 @@
+.product-wrap {
+  line-height: 26px;
+  margin: 50px;
+  .product-list {
+    width: 200px;
+    .title {
+      display: flex;
+      font-weight: 700;
+      div {
+        width: 50%;
+      }
+    }
+    .product-title {
+      text-align: center;
+      font-weight: 700;
+    }
+    .product-item {
+      display: flex;
+      div {
+        width: 50%;
+      }
+      .name {
+        color: red;
+      }
+    }
+  }
+}
