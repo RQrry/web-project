@@ -20,7 +20,7 @@
 * [todolist](https://rqrry.github.io/web-project/Vue/todolist/dist/index.html) vue-router+vuex 手机端预览
 
 ## React
-* [thinking-in-react](https://codepen.io/RQrry/pen/zgKWea?editors=0110) React 哲学 组件demo
+* [thinking-in-react](https://rqrry.github.io/web-project/React/thinking-in-react/build/index.html) React 哲学 组件demo
 
 ## Game
 原生js
