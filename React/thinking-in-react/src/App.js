@@ -1,5 +1,7 @@
 import React from 'react';
 import ProductWrap from './ProductWrap';
+import TodoList from './TodoList';
+import './App.scss';
 
 function App() {
   const PRODUCTS = [
@@ -13,6 +15,8 @@ function App() {
   return (
     <div className="App">
       <ProductWrap products={PRODUCTS} />
+      <hr />
+      <TodoList />
     </div>
   );
 }

@@ -1,10 +1,9 @@
-import React from 'react'
-import './ProductWrap.scss'
+import React, { Component } from 'react'
 
 // ProductItem 一条产品
-class ProductItem extends React.Component {
+class ProductItem extends Component {
   render () {
-    const item = this.props.item;
+    const { item } = this.props;
 
     return (
       <div className="product-item">
@@ -16,9 +15,9 @@ class ProductItem extends React.Component {
 }
 
 // ProductTitle 产品标题
-class ProductTitle extends React.Component {
+class ProductTitle extends Component {
   render () {
-    const category = this.props.category;
+    const { category } = this.props;
 
     return (
       <div className="product-title">
@@ -29,10 +28,9 @@ class ProductTitle extends React.Component {
 }
 
 // ProductList 产品列表
-class ProductList extends React.Component {
+class ProductList extends Component {
   render () {
-    const filterText = this.props.filterText;
-    const inStockOnly = this.props.inStockOnly;
+    const { filterText, inStockOnly } = this.props;
 
     const item = [];
     let title;
@@ -65,7 +63,7 @@ class ProductList extends React.Component {
 }
 
 // SearchTool 搜索
-class SearchTool extends React.Component {
+class SearchTool extends Component {
   constructor (props) {
     super(props);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
@@ -81,8 +79,7 @@ class SearchTool extends React.Component {
   }
 
   render () {
-    const filterText = this.props.filterText;
-    const inStockOnly = this.props.inStockOnly;
+    const { filterText, inStockOnly } = this.props;
 
     return (
       <div className="search-tool">
@@ -106,7 +103,7 @@ class SearchTool extends React.Component {
 }
 
 // ProductWrap 组件包裹框
-class ProductWrap extends React.Component {
+class ProductWrap extends Component {
   constructor (props) {
     super(props);
     this.state = {
