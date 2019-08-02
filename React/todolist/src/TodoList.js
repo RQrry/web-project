@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import { Input, Button, List } from 'antd';
 import store from './store';
+import { getInputChangeAction, getItemAddAction, getItemDeleteAction } from './store/actionCreators'
 
 class TodoList extends Component {
   constructor (props) {
@@ -9,25 +10,21 @@ class TodoList extends Component {
     this.state = store.getState();
     store.subscribe(() => this.handleStoreChange());
   }
-
-  handleInputChange (e) {
-    const action = {
-      type: 'change_input_value',
-      value: e.target.value
-    }
-    store.dispatch(action);
-  }
-
+  
   handleStoreChange () {
     this.setState(store.getState());
   }
 
-  handleClick () {
-    const action = {
-      type: 'add_todo_item',
-      value: this.state.inputValue
-    }
-    store.dispatch(action);
+  handleInputChange (e) {
+    store.dispatch(getInputChangeAction(e.target.value));
+  }
+
+  handleItemAdd () {
+    store.dispatch(getItemAddAction());
+  }
+
+  handleItemDelete (index) {
+    store.dispatch(getItemDeleteAction(index));
   }
 
   render () {
@@ -42,13 +39,15 @@ class TodoList extends Component {
         <Button
           type="primary"
           style={{marginLeft: 10}}
-          onClick={() => this.handleClick()}
+          onClick={() => this.handleItemAdd()}
         >Submit</Button>
         <List
           bordered
           dataSource={this.state.list}
           style={{width: 300, marginTop: 10}}
-          renderItem={item => <List.Item>{item}</List.Item>}
+          renderItem={(item, index) => 
+            <List.Item onClick={() => this.handleItemDelete(index)}>{item}</List.Item>
+          }
         />
       </div>
     )
