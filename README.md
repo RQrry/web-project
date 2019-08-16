@@ -7,6 +7,9 @@
 ## CSS3
 * [loading](https://rqrry.github.io/web-project/CSS3/loading/index.html) 加载动画
 
+## javascript
+* [轮播图](https://rqrry.github.io/web-project/javascript/banner/index.html) js版本轮播图插件
+
 ## jquery
 * [todo](https://rqrry.github.io/web-project/jquery/todo/index.html) jq版本的todo
 
